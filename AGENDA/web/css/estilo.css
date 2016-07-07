@@ -1,0 +1,46 @@
+
+
+.AlinhamentoTabela{
+    text-align: center;
+    color: #999999;
+    font-weight: bold;
+}
+
+.ExcluirContato{
+    font-size: 40px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ff0000;
+    
+}
+
+.ExcluirContatoSelecao{
+    font-size: 40px;
+    font-family: Arial;
+    font-weight: bold;
+    color: black;
+    
+}
+
+.Menu{
+    letter-spacing: 4px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #cc0000;
+}
+
+.Menu{
+    letter-spacing: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #cc0000;
+}
+
+.MenuItem{
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-weight: bold;
+   
+}
+
+

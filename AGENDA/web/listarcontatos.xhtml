@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+       <ui:decorate template="index.xhtml">
+        <ui:define name="centro">
+                <h:form>
+                    <p:dataTable value="#{contatoController.listaContatos}" var="lista" emptyMessage="Não tem nenhum registro">
+                    <p:column headerText="ID" styleClass="AlinhamentoTabela" style="color:#0066ff">
+                        <p:outputLabel value="#{lista.id}"/>
+                    </p:column>
+                    
+                    <p:column headerText="NOME"  styleClass="AlinhamentoTabela" style="color:#009999">
+                        <p:outputLabel value="#{lista.nome}"/>
+                    </p:column>
+                    
+                    <p:column headerText="ENDEREÇO"  styleClass="AlinhamentoTabela" style="color:#009999">
+                        <p:outputLabel value="#{lista.endereco}"/>
+                    </p:column>
+                    
+                    <p:column headerText="CIDADE"  styleClass="AlinhamentoTabela" style="color:#009999">
+                        <p:outputLabel value="#{lista.cidade}"/>
+                    </p:column>
+                    
+                    <p:column headerText="UF"  styleClass="AlinhamentoTabela" style="color:#009999">
+                        <p:outputLabel value="#{lista.uf}"/>
+                    </p:column>
+                    
+                    <p:column headerText="TELEFONE" styleClass="AlinhamentoTabela" style="color:#009999">
+                        <p:outputLabel value="#{lista.telefone}"/>
+                    </p:column>
+                    
+                    <p:column headerText="CELULAR"  styleClass="AlinhamentoTabela" style="color:#009999">
+                        <p:outputLabel value="#{lista.celular}"/>
+                    </p:column>
+                    
+                    <p:column headerText="EMAIL"  styleClass="AlinhamentoTabela" style="color:#009999">
+                        <p:outputLabel value="#{lista.email}"/>
+                    </p:column>
+                    <p:column headerText="*" style="text-align: center; color: #ff0000" resizable="false" width="50">
+                        <p:commandLink action="editarcontato" actionListener="#{contatoController.selecionarContato()}">
+                            <p:graphicImage value="/imagens/images.jpg" width="40" height="40"/>
+                        </p:commandLink>
+                    </p:column>
+                    
+                      <p:column headerText="*" style="text-align: center; color: #ff0000" resizable="false" width="50">
+                        <p:commandLink action="excluircontato" actionListener="#{contatoController.selecionarContato()}">
+                            <p:graphicImage value="/imagens/download.jpg" width="40" height="40"/>
+                        </p:commandLink>
+                    </p:column>
+                     
+                    </p:dataTable> 
+                 </h:form>
+        </ui:define>
+    </ui:decorate>
+</html>
+
